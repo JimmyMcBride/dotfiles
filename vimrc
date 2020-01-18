@@ -39,8 +39,8 @@ set noswapfile
 set showcmd
 
 noremap <Leader>t :NERDTreeToggle<Enter>
-nnoremap <Leader>r :w<CR>:!clear;python %<CR>
-inoremap <Leader>r <Esc>:w<CR>:!clear;python %<CR>
+nnoremap <Leader>i :w<CR>:!clear;python %<CR>
+inoremap <C-i> <Esc>:w<CR>:!clear;python %<CR>
 
 nnoremap html :-1read $HOME/.vim/snippets/HTML5_template.html<Enter>6j3wa
 nnoremap rfc :-1read $HOME/.vim/snippets/react_functional_component.js<Enter>4j3wi
