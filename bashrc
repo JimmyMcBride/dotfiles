@@ -64,6 +64,9 @@ export SCM_CHECK=true
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 
+# Alias for home
+alias home="pushd ~ && clear"
+
 # Alias for pushd
 alias pd="pushd"
 
@@ -101,7 +104,7 @@ alias update="sudo pacman -Syu"
 alias vs="code . && clear"
 
 # Alias for reloading terminal
-alias reload="source ~/.bashrc"
+alias reload="source ~/.bashrc && clear"
 
 # Alias for shutting down computer
 alias off="poweroff"
@@ -110,25 +113,19 @@ alias off="poweroff"
 alias postsql="sudo -u postgres psql"
 
 # Alias for bushido template
-alias bush="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido && clear"
+alias bush="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido && code . && clear"
 
 # Alias for bushido light template
-alias bushl="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-lite && clear"
+alias bushl="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-lite && code . && clear"
 
 # Alias for bushido plus template
-alias bushp="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-plus && clear"
+alias bushp="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-plus && code . && clear"
 
 # Alias for bushido-strap
-alias strap="pushd ~/Documents/packages/bushido-strap && clear"
+alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear"
 
 # Alias for python
 alias py="python"
-
-# Alias for home
-alias home="pushd ~ && clear"
-
-# Alias for correct color scheme for vim in tmux
-# alias tmux="TERM=screen-256color-bce tmux"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

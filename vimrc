@@ -1,4 +1,3 @@
-"  testing
 set nocompatible
 filetype off
 
@@ -23,6 +22,7 @@ command! MakeTags !ctags -R .
 
 let mapleader = ' '
 
+set hlsearch
 set spell spelllang=en_us
 set number relativenumber
 set smartindent
@@ -38,6 +38,7 @@ set splitright
 set noswapfile
 set showcmd
 
+nnoremap <C-t> i<Space><Space><Space><Space>
 noremap <Leader>t :NERDTreeToggle<Enter>
 nnoremap <Leader>i :w<CR>:!clear;python %<CR>
 inoremap <C-i> <Esc>:w<CR>:!clear;python %<CR>
