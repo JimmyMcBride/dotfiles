@@ -58,8 +58,8 @@ export SCM_CHECK=true
 # Uncomment this to make Bash-it create alias reload.
 # export BASH_IT_RELOAD_LEGACY=1
 
-# Exports home/username/bin to PATH variable
-# export PATH=$PATH:$HOME/bin
+# Exports /home/jimmy/local/nodejs/bin to PATH variable
+export PATH=$PATH:$HOME/local/nodejs/bin:$HOME/local/python/bin
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
@@ -74,25 +74,25 @@ alias pd="pushd"
 alias p="popd && clear"
 
 # Alias for lambda directory
-alias lam="pushd ~/Documents/lambda && clear"
+alias lam="pushd ~/Documents/lambda && clear && ls"
 
 # Alias for notes directory
-alias note="pushd ~/Documents/notes && clear"
+alias note="pushd ~/Documents/notes && clear && ls"
 
 # Alias for pets directory
-alias pet="pushd ~/Documents/pets && clear"
+alias pet="pushd ~/Documents/pets && clear && ls"
 
 # Alias for experiments directory
-alias exp="pushd ~/Documents/experiments && clear"
+alias exp="pushd ~/Documents/experiments && clear && ls"
 
 # Alias for experiments directory
-alias pack="pushd ~/Documents/packages && clear"
+alias pack="pushd ~/Documents/packages && clear && ls"
 
 # Alias for bin directory
-alias bin="pushd ~/bin && clear"
+alias bin="pushd ~/bin && clear && ls"
 
 # Alias for blog directory
-alias blog="pushd ~/Documents/blog && clear"
+alias blog="pushd ~/Documents/blog && clear && ls"
 
 # Alias for clearing terminal
 alias x="clear"
@@ -110,22 +110,52 @@ alias reload="source ~/.bashrc && clear"
 alias off="poweroff"
 
 # Alias for postgresql
-alias postsql="sudo -u postgres psql"
+alias postgres="clear && sudo -u postgres psql"
 
 # Alias for bushido template
-alias bush="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido && code . && clear"
+alias bush="pushd
+~/Documents/packages/create-react-app/packages/cra-template-bushido && code .
+&& clear && exit"
 
 # Alias for bushido light template
-alias bushl="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-lite && code . && clear"
+alias bushl="pushd
+~/Documents/packages/create-react-app/packages/cra-template-bushido-lite &&
+  code . && clear && exit"
 
 # Alias for bushido plus template
-alias bushp="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-plus && code . && clear"
+alias bushp="pushd
+~/Documents/packages/create-react-app/packages/cra-template-bushido-plus &&
+  code . && clear && exit"
 
 # Alias for bushido-strap
-alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear"
+alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear && exit"
 
 # Alias for python
 alias py="python"
+
+# Alias for opening .vimrc file
+alias vimrc="vim ~/.vimrc"
+
+# Alias for opening .bashrc file
+alias bashrc="vim ~/.bashrc"
+
+# Alias for opening .bashrc file
+alias tmuxconf="vim ~/.tmux.conf"
+
+# Alias for opening .bashrc file
+alias nscript="pushd ~/local/nodejs/bin && code . && clear"
+
+# Alias for opening .bashrc file
+alias pscript="pushd ~/local/python/bin && code . && clear"
+
+# Alias for opening test folder
+alias test="pushd ~/Documents/test && clear"
+
+# Alias for opening bushido-strap test folder
+alias teststrap="pushd ~/Documents/test/bushido-strap-test && code . && clear"
+
+# Alias for remote ssh on raspberrypi
+alias mypi="ssh pi@192.168.88.20"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
