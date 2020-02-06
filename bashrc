@@ -97,6 +97,9 @@ alias blog="pushd ~/Documents/blog && clear && ls"
 # Alias for clearing terminal
 alias x="clear"
 
+# Alias for clearing terminal then listing
+alias xl="clear && ls"
+
 # Alias for updating Manjaro
 alias update="sudo pacman -Syu"
 
