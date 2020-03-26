@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-
+" askldjf;alskdjf
 call pathogen#infect()
 " call pathogen#helptags()
 call plug#begin('~/.vim/plugged')
