@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-" askldjf;alskdjf
+
 call pathogen#infect()
 " call pathogen#helptags()
 call plug#begin('~/.vim/plugged')
@@ -8,12 +8,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'morhetz/gruvbox'
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
@@ -23,9 +26,11 @@ filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
 " let g:airline_theme='one'
-let g:gruvbox_italic=1
-" let g:one_allow_italics=1
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+let g:one_allow_italics=1
+" colorscheme gruvbox
+" colorscheme dracula 
+colorscheme onedark
 set background=dark
 
 let g:prettier#config#single_quote = 'false'

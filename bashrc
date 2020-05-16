@@ -1,10 +1,12 @@
+#!/usr/bin/env bash
+
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
     *) return;;
 esac
 
-# Path to the bash it configuration asdf asdf
+# Path to the bash it configuration
 export BASH_IT="/home/jimmy/.bash_it"
 
 # Lock and Load a custom theme file.
@@ -57,7 +59,7 @@ export SCM_CHECK=true
 # export BASH_IT_RELOAD_LEGACY=1
 
 # Exports /home/jimmy/local/nodejs/bin to PATH variable
-export PATH=$PATH:$HOME/local/nodejs/bin:$HOME/local/python/bin
+export PATH=$PATH:$HOME/local/nodejs/bin:$HOME/local/python/bin:$HOME/bin
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
@@ -92,11 +94,8 @@ alias bin="pushd ~/bin && clear && ls"
 # Alias for blog directory
 alias blog="pushd ~/Documents/blog && clear && ls"
 
-# Alias for clearing terminal
-alias x="clear"
-
 # Alias for clearing terminal then listing
-alias xl="clear && ls"
+alias x="clear && ls"
 
 # Alias for updating Manjaro
 alias update="sudo pacman -Syu"
@@ -104,7 +103,7 @@ alias update="sudo pacman -Syu"
 # Alias for opening directory in VS Code
 alias vs="code . && clear"
 
-# Alias for reloading terminal
+# Alias for reloading .bashrc in current terminal
 alias reload="source ~/.bashrc && clear"
 
 # Alias for shutting down computer
@@ -114,19 +113,13 @@ alias off="poweroff"
 alias postgres="clear && sudo -u postgres psql"
 
 # Alias for bushido template
-alias bush="pushd
-~/Documents/packages/create-react-app/packages/cra-template-bushido && code .
-&& clear && exit"
+alias bush="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido && code . && clear && exit"
 
 # Alias for bushido light template
-alias bushl="pushd
-~/Documents/packages/create-react-app/packages/cra-template-bushido-lite &&
-  code . && clear && exit"
+alias bushl="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-lite && code . && clear && exit"
 
 # Alias for bushido plus template
-alias bushp="pushd
-~/Documents/packages/create-react-app/packages/cra-template-bushido-plus &&
-  code . && clear && exit"
+alias bushp="pushd ~/Documents/packages/create-react-app/packages/cra-template-bushido-plus && code . && clear && exit"
 
 # Alias for bushido-strap
 alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear && exit"
@@ -135,30 +128,103 @@ alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear && exit
 alias py="python"
 
 # Alias for opening .vimrc file
-alias vimrc="vim ~/.vimrc"
+alias vimrc="nvim ~/.config/nvim/init.vim"
 
 # Alias for opening .bashrc file
-alias bashrc="vim ~/.bashrc"
+alias bashrc="nvim ~/.bashrc"
 
 # Alias for opening .bashrc file
-alias tmuxconf="vim ~/.tmux.conf"
+alias tmuxconf="nvim ~/.tmux.conf"
 
 # Alias for opening .bashrc file
-alias nscript="pushd ~/local/nodejs/bin && code . && clear"
+alias nbin="pushd ~/local/nodejs/bin && clear && ls"
 
 # Alias for opening .bashrc file
-alias pscript="pushd ~/local/python/bin && code . && clear"
+alias pbin="pushd ~/local/python/bin && clear && ls"
 
 # Alias for opening test folder
-alias test="pushd ~/Documents/test && clear"
+# alias test="pushd ~/Documents/test && clear"
 
 # Alias for opening bushido-strap test folder
-alias teststrap="pushd ~/Documents/test/bushido-strap-test && code . && clear"
+# alias teststrap="pushd ~/Documents/test/bushido-strap-test && code . && clear"
 
 # Alias for remote ssh on raspberrypi
 alias mypi="ssh pi@192.168.88.20"
 
+# Alias for remote ssh on raspberrypi
+alias dock="sudo systemctl start docker && sudo systemctl enable docker && sudo docker run hello-world"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Alias for generating new schema and running seeds
+alias gen="sudo make prisma-generate && make local-prisma-reseed"
+
+# Alias for bringing up prismatopia server
+alias serverup="sudo make local-up"
+
+# Exports firebase service account for 
+export GOOGLE_APPLICATION_CREDENTIALS="/home/jimmy/Downloads/full-stack-react-graphql-firebase-adminsdk-4tb19-953c48a82d.json"
+
+# Exports Firebase GQL Crud service account for 
+# export GOOGLE_APPLICATION_CREDENTIALS="/home/jimmy/Downloads/firestore-graphql-crud-backend-5fbed2296944.json"
+
+# Alias for AdaptivApps
+alias adap="pushd ~/Documents/lambda/AdaptivApps && code . && exit"
+
+# Alias for AdaptivUI
+alias advui="pushd ~/Documents/packages/adaptiv-ui && code . && exit"
+
+stty -ixon
+
+# export LS_COLORS="di=1;36:ex=32:fi=33"
+alias ls="ls --color"
+
+export PATH=$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/home/jim/.gem/ruby/2.7.0:/usr/lib/ruby/gems/2.7.0:/usr/bin/rails
+export PATH=$PATH:$HOME/local/nodejs/todo
+
+# Alias for React Native folder
+alias native="pushd ~/Documents/native && ls"
+
+# Alias for Neovim
+alias v="nvim"
+
+# Alias for Tetris project
+alias tet="pushd ~/Documents/pets/tetris && clear && ls"
+
+# Alias for python notes folder
+alias pyth="pushd ~/Documents/python-notes && clear && ls"
+
+# Alias for Hyper config
+alias hyp="nvim ~/.hyper.js"
+
+# Alias for Design Hub X
+alias hub="pushd ~/Documents/lambda/designhub && clear && ls"
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+alias ..="cd .. && clear && ls"
+alias ...="cd ../.. && clear && ls"
+alias ....="cd ../../.. && clear && ls"
+alias .....="cd ../../../.. && clear && ls"
+
+alias tap="pushd ~/Documents/tap && clear && ls"
+alias tapb="code ~/Documents/tap/Back-End"
+alias tapf="code ~/Documents/tap/Front-End"
+
+alias mud="pushd ~/Documents/mud-game && clear && ls"
+alias psw="nvim ~/.pswrds"
+alias srir="code ~/Documents/sriracha-docs"
+alias sui="code ~/Documents/sriracha"
+alias me="code ~/Documents/pets/me"
+alias oni="~/Downloads/Onivim2-x86_64.AppImage"
 
