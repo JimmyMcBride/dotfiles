@@ -59,7 +59,7 @@ export SCM_CHECK=true
 # export BASH_IT_RELOAD_LEGACY=1
 
 # Exports /home/jimmy/local/nodejs/bin to PATH variable
-export PATH=$PATH:$HOME/local/nodejs/bin:$HOME/local/python/bin:$HOME/bin
+export PATH=$PATH:$HOME/local/nodejs/bin:$HOME/local/python/bin:$HOME/bin:$HOME/redis-stable/src
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
@@ -131,7 +131,7 @@ alias strap="pushd ~/Documents/packages/bushido-strap && code . && clear && exit
 alias py="python"
 
 # Alias for opening .vimrc file
-alias vimrc="nvim ~/.config/nvim/init.vim"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
 
 # Alias for opening .bashrc file
 alias bashrc="nvim ~/.bashrc"
@@ -207,7 +207,7 @@ alias hub="pushd ~/Documents/lambda/designhub && clear && ls"
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.rvm/bin:/usr/local/go/bin:$HOME/go/bin"
 
 alias ..="cd .. && clear && ls"
 alias ...="cd ../.. && clear && ls"
@@ -233,3 +233,11 @@ alias eso="pushd ~/Documents/eso && clear && ls"
 alias redis-server="~/redis-stable/src/redis-server"
 alias run="python manage.py runserver"
 alias shell="pipenv shell"
+export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/go"
+alias pls=sudo
+alias las="ls -h --author --time-style=long-iso -dUl -- .* * | awk '{if(NR>2)print \$5, \$7, \$9}'"
+alias alarc="nvim ~/.config/alacritty/alacritty.yml"
+alias server="ssh ubuntu@192.168.88.91"
+alias tapec2="ssh -i "~/tap-public-key.pem" ubuntu@18.205.109.72"
+alias pswrds="sudo nvim ~/.pswrds"
