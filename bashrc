@@ -235,9 +235,11 @@ alias run="python manage.py runserver"
 alias shell="pipenv shell"
 export GOBIN="$HOME/go/bin"
 export GOPATH="$HOME/go"
+export GOROOT="/usr/local/go"
+export PATH=$PATH:$GOBIN:$GOROOT/bin
 alias pls=sudo
 alias las="ls -h --author --time-style=long-iso -dUl -- .* * | awk '{if(NR>2)print \$5, \$7, \$9}'"
 alias alarc="nvim ~/.config/alacritty/alacritty.yml"
 alias server="ssh ubuntu@192.168.88.91"
-alias tapec2="ssh -i "~/tap-public-key.pem" ubuntu@18.205.109.72"
+alias tapec2="ssh -i "~/.ssh/tap-public-key.pem" ubuntu@18.205.109.72"
 alias pswrds="sudo nvim ~/.pswrds"
